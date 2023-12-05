@@ -20,11 +20,6 @@ function App() {
   }
 ]);
 
-const handleKeyPress = (e) => {
-  if (e.key === 'Enter') {
-    handleSend();
-  }
-};
 
   const handleSend = async () => {
     const text = input;
@@ -130,7 +125,7 @@ const handleKeyPress = (e) => {
               onChange={(e) => {
                 setInput(e.target.value);
               }}
-              onKeyDown={handleKeyPress}
+            
             />
             <button className="send" onClick={handleSend}>
               <img src={sentBtn} alt="" />
